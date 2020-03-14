@@ -1,32 +1,5 @@
+<%= render "shared/errors" , obj: @article %>
 
-<% if @article.errors.any? %>
-    <div class="row">
-        <div class="col-xs-8 col-xs-offset-2">
-            <div class="panel panel-danger">
-                <div class="panel-heading">
-                    <h2 class="panel-title">
-                        <%= pluralize(@article.errors.count, "error") %>
-                        Prohibited this article from being saved:
-                    </h2>
-                    <div class="panel-body">
-                        <ul>
-                            <% @article.errors.full_messages.each do |msg| %>
-                                <li><%= msg %></li>
-                                <% end %>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<h2> The following errors prevented the articel from getting created </h2>
-<ul>
-    <% @article.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %>
-</ul>
-<% end %>
 
 <div class='row'>
     <div class='col-xs-12'>
@@ -40,7 +13,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="control-label col-sm-2"/>
+            <div class="control-label col-sm-2">
                 <%= f.label :discription %>
             </div>
             <div class="col-sm-10">
@@ -58,4 +31,3 @@
             [<%= link_to "Cancel requiest and return articles listing", articles_path %>]
         </div>
     </div>
-</div> 
