@@ -18,15 +18,17 @@ class UsersController < ApplicationController
 
     def update
         @user = User.find(params[:id])
-
         if @user.update(user_params)
         flash[:success] = "your account was updated secessfuly"
         redirect_to articles_path
         else
             render 'edit'
         end  
-
     end 
+
+    def show
+        @user = User.find(params[:id])
+    end
     
     private
     def user_params
