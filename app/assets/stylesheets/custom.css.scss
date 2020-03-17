@@ -80,7 +80,15 @@ footer ul li{
     margin-top: 0;
     
     }
+    
+    .input_checkbox input {
+        width: auto !important;
+    }
 
     .listing {
         list-style: none;
+    }
+
+    .badge {
+        background-color: blue($color: #1445af);
     }
